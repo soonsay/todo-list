@@ -1,0 +1,30 @@
+Base Design:
+- Font options: poppins, DM Serif Display
+- Color: muted/dark theme. Pastels for Green/Red
+
+Base:
+- Grid layout a la admin page
+- Lefthand container column -> contains New task button, schedule, projects
+	- Projects can be added with a New Project button, bottom left. Adds a new row to projects & lets user fill form (add/cancel buttons)
+	- Projects once added will be put in the Project container
+	- Project components will  have burger bar available on the project/parent, number of tasks modal. Will have 3 lines to indicate draggable
+		- Clicking on project component will open list in right column, display tasks
+		- Add task option will be available beneath most recent option - unless there is overflow in which case stick to bottom
+		- Add task menu will provide a prompt to fill in name, details, due date
+		
+	Tasks:	
+		- Clicking add task will provide a prompt for specifinyg title, description, due date
+		- Complete/Incomplete dot on left side, title in middle-left, due date and mark as important on right
+		- Clicking task will create 3rd column with description and scheduled date
+
+
+
+- Righthand container contains task details/context menu
+
+
+
+Functionality:
+
+
+Bells and whistles:
+-

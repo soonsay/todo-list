@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+    width: auto;
+    margin: 0px;
+}
+
+#parentContainer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-rows: 20fr 0.35fr;
+}
+
+#leftColumn {
+    display: grid;
+    grid-template-rows: 0.5fr 1.5fr;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#rightColumn {
+    display: grid;
+    grid-template-rows: 0.5fr 1.5fr;
+    border-bottom: 2px solid black;
+}
+
+#footer {
+    grid-column: 1 / 3;
+    text-align: center;
+}
