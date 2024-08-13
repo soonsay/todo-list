@@ -17,13 +17,57 @@ html, body {
     grid-template-rows: 0.5fr 1.5fr;
     border-bottom: 2px solid black;
     border-right: 2px solid black;
+
 }
+
+#homeArea {
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    gap: 2rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.homeButton, .projectButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 1px solid black;
+}
+
+.homeButton:hover, .projectButton:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#projectArea {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 2rem 0;
+}
+
+
+
+
 
 #rightColumn {
     display: grid;
     grid-template-rows: 0.5fr 1.5fr;
     border-bottom: 2px solid black;
 }
+
+#urgentTasks {
+    display:grid;
+    border: 1px solid black;
+    margin: 2rem;
+}
+
+#myDay {
+    display: grid;
+    margin: 2rem;
+}
+
 
 #footer {
     grid-column: 1 / 3;
