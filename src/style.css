@@ -27,25 +27,42 @@ html, body {
     margin: 2rem 0 2rem 0;
 }
 
-.homeButton, .projectButton {
+.homeButton, .projectButton, .projectControl {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 2rem;
     padding-right: 2rem;
     border: 1px solid black;
+    min-height: 5rem;
 }
 
 .homeButton:hover, .projectButton:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+
 #projectArea {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 0 0;
+    border: 1px solid black;
+}
+
+#projectContainer {
     display: grid;
     grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+    overflow-y: auto;
+    max-height: 53vh;
     gap: 2rem;
     margin: 2rem 0 2rem 0;
 }
+
+#projectControl {
+    position: sticky;
+}
+
+
 
 
 
@@ -53,11 +70,11 @@ html, body {
 
 #rightColumn {
     display: grid;
-    grid-template-rows: 0.5fr 1.5fr;
+    grid-template-rows: 0.35fr 1.5fr;
     border-bottom: 2px solid black;
 }
 
-#urgentTasks {
+#timeLine {
     display:grid;
     border: 1px solid black;
     margin: 2rem;
@@ -65,6 +82,7 @@ html, body {
 
 #myDay {
     display: grid;
+    border: 1px solid black;
     margin: 2rem;
 }
 

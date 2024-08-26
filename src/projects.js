@@ -4,7 +4,8 @@ let projects = {
     },
 
 
-    projectButtons: ['Project 1', 'New Project']
+    projectButtons: [],
+    projectControls: ['New Project']
 }
 
 

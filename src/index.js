@@ -19,7 +19,16 @@ const leftColumn = document.getElementById('leftColumn')
     const projectArea = document.createElement('div');
         projectArea.setAttribute('id', 'projectArea');
 
-        commonFunctions.addButtons(projectArea, projects.projectButtons, 'projectButton')
+        const projectContainer = document.createElement('div');
+
+        projectContainer.setAttribute('id', 'projectContainer');
+
+        const projectControl = document.createElement('div');
+        projectControl.setAttribute('id', 'projectControl');
+        commonFunctions.addButtons(projectControl, projects.projectControls, 'projectControl')
+
+        projectArea.appendChild(projectContainer);
+        projectArea.appendChild(projectControl);
 
 
     leftColumn.appendChild(homeArea)
@@ -32,16 +41,16 @@ const leftColumn = document.getElementById('leftColumn')
 
 
 
+
 const rightColumn = document.getElementById('rightColumn')
-    const urgentTasks = document.createElement('div');
-        urgentTasks.setAttribute('id', 'urgentTasks');
+    const timeLine = document.createElement('div');
+        timeLine.setAttribute('id', 'timeLine');
 
     const myDay = document.createElement('div');
         myDay.setAttribute('id', 'myDay');
-        myDay.innerText = 'myDay'
 
     
-    rightColumn.appendChild(urgentTasks)
+    rightColumn.appendChild(timeLine)
     rightColumn.appendChild(myDay)
 
 
