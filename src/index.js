@@ -7,6 +7,39 @@ import { projects } from './projects.js';
 
 const body = document.body;
 
+
+// project modal
+const projModal = document.createElement('div');
+projModal.setAttribute('id', 'projModal');
+
+const projModalContent = document.createElement('div');
+projModalContent.setAttribute('id', 'projModalContent');
+
+const projectNameEntry = document.createElement('input');
+projectNameEntry.setAttribute('id', 'projNameEntry');
+
+const closeButton = document.createElement('span');
+closeButton.setAttribute('id', 'modalClose');
+closeButton.innerText = 'x'
+
+const addButton = document.createElement('button');
+addButton.setAttribute('id', 'modalAdd');
+
+projModalContent.appendChild(projectNameEntry);
+projModalContent.appendChild(addButton);
+projModalContent.appendChild(closeButton);
+
+projModal.appendChild(projModalContent);
+
+body.appendChild(projModal);
+
+
+// task modal
+
+
+
+//
+
 const leftColumn = document.getElementById('leftColumn')
 
     const homeArea = document.createElement('div');
