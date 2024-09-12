@@ -38,6 +38,18 @@ body.appendChild(projModal);
 
 
 
+// dropdown handling
+document.addEventListener('click', (e) => {
+    let dropdowns = document.querySelectorAll('.show');
+    for (let elem of dropdowns) {
+            if (e.target != elem && e.target != elem.parentElement.parentElement) {
+                elem.classList.remove('show');
+            }
+        }
+
+    }
+
+)
 //
 
 const leftColumn = document.getElementById('leftColumn')
@@ -46,7 +58,7 @@ const leftColumn = document.getElementById('leftColumn')
         homeArea.setAttribute('id', 'homeArea');
         homeArea.innerText = 'Mile-A-Minute'
 
-        commonFunctions.addButtons(homeArea, home.homeButtons, 'homeButton');
+        commonFunctions.createArea(homeArea, home.homeButtons, 'homeButton');
 
 
     const projectArea = document.createElement('div');
@@ -58,7 +70,7 @@ const leftColumn = document.getElementById('leftColumn')
 
         const projectControl = document.createElement('div');
         projectControl.setAttribute('id', 'projectControl');
-        commonFunctions.addButtons(projectControl, projects.projectControls, 'projectControl')
+        commonFunctions.createArea(projectControl, projects.projectControls, 'projectControl')
 
         projectArea.appendChild(projectContainer);
         projectArea.appendChild(projectControl);
