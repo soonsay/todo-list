@@ -1,3 +1,7 @@
+import { projects } from './projects';
+import tasks from './tasks';
+
+
 let commonFunctions = {
 
     logger: function(message) {
@@ -10,6 +14,7 @@ let commonFunctions = {
     createArea: function(container, buttons, classList) {
 
         // Adds buttons.. maybe shouldn't be nested in createArea - tbd
+        console.log(buttons);
 
         function addButtons(container, buttons, classList) {
 
@@ -30,6 +35,30 @@ let commonFunctions = {
             }
         };
 
+        function showProjects() {
+            for (let i = 0; i < projects.projectsList.length; i += 1) {
+                const projectLink = document.createElement('a');
+                const projectIconandTextDiv = document.createElement('div');
+                const projectIcon = document.createElement('i');
+                const projectText = document.createElement('p');
+                const projectIconsDiv = document.createElement('div');
+                const projectEditIcon = document.createElement('i');
+                const projectDeleteIcon = document.createElement('i');
+
+                projectIconandTextDiv.classList.add(
+                    'project-icon-and-text-div',
+                    'project',
+                    'select'
+                );
+                projectIconandTextDiv.setAttribute('data-link-index', i);
+                projectIconsDiv.classList.add(
+                    'project-default-icons-div',
+                    'project',
+                    'select'
+                );
+            }
+
+        }
         function addProject(projectName) {
             let newProject = document.createElement('div');
 
@@ -115,19 +144,28 @@ let commonFunctions = {
             dropdownContent.classList.add('dropdown-content');
 
             if (type == 'project') {
-                let options = ['delete', 'rename', 'add task']
+                let options = ['delete', 'add task']
                 for (let option of options) {
                     let item = document.createElement('button');
                     item.classList.add('dropbtn');
                     item.innerText = option;
                     dropdownContent.appendChild(item);
+                    if (option =='delete') {
+                        let project = item.innerText;
+                        item.addEventListener('click', () => {deleteProject(project)})
+                    }
                 }
                 dropdown.appendChild(dropdownContent);
                 return dropdown;
             }
         }
+
+        function deleteProject(project) {
+            
+        }
         addButtons(container, buttons, classList);
     },
+
 
 }
 

@@ -22,9 +22,26 @@ Base:
 - Righthand container contains task details/context menu
 
 
+Project Structure:
+- Ability to create elements -> allows for project creation and task creation
+- Organization:
+	- Reference mooniiDev and do code review
+	- dom.js, handlers.js, index.js, projects.js, tasks.js
+	- Maybe modal.js
 
-Functionality:
+- Refactor project to use factory function and/or class
+
+- Start from Functionality printing objs and tasks
+- Move onto DOM after
 
 
 Bells and whistles:
+-
+
+
+
+PROJECT REFACTOR:
+
+- Would like projects and tasks to be handled by factory functions to actually learn something.
+- In future, make the DOM logic work properly before trying to add things to the front end
 -

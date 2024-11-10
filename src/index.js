@@ -70,6 +70,7 @@ const leftColumn = document.getElementById('leftColumn')
 
         const projectControl = document.createElement('div');
         projectControl.setAttribute('id', 'projectControl');
+        console.log(projects.projectControls)
         commonFunctions.createArea(projectControl, projects.projectControls, 'projectControl')
 
         projectArea.appendChild(projectContainer);
